@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\UCOSII\CONFIG;..\UCOSII\CORE;..\UCOSII\PORT</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\UCOSII\CONFIG;..\UCOSII\CORE;..\UCOSII\PORT;..\HARDWARE\ENC28J60;..\HARDWARE\spi;..\HARDWARE\tim;..\uIP-APP;..\uIP-1.0\apps\webserver;..\uIP-1.0\uip;..\HARDWARE\rtc;..\NET\EDP;..\NET\onenet\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -433,6 +433,26 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\LED\led.c</FilePath>
             </File>
+            <File>
+              <FileName>enc28j60.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\ENC28J60\enc28j60.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\spi\spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\tim\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\rtc\rtc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -497,6 +517,96 @@
               <FileName>stm32f10x_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32F10x_FWLib\src\stm32f10x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_bkp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_bkp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_cec.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_cec.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_fsmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_pwr.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_wwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_wwdg.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -597,6 +707,126 @@
               <FileName>README.TXT</FileName>
               <FileType>5</FileType>
               <FilePath>..\README.TXT</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>uip-1.0</GroupName>
+          <Files>
+            <File>
+              <FileName>psock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\psock.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>uip.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\uip.c</FilePath>
+            </File>
+            <File>
+              <FileName>uip_arp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\uip_arp.c</FilePath>
+            </File>
+            <File>
+              <FileName>uip-fw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\uip-fw.c</FilePath>
+            </File>
+            <File>
+              <FileName>uiplib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\uiplib.c</FilePath>
+            </File>
+            <File>
+              <FileName>uip-neighbor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\uip-neighbor.c</FilePath>
+            </File>
+            <File>
+              <FileName>uip-split.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\uip\uip-split.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>uip-app</GroupName>
+          <Files>
+            <File>
+              <FileName>clock-arch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-APP\clock-arch.c</FilePath>
+            </File>
+            <File>
+              <FileName>tapdev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-APP\tapdev.c</FilePath>
+            </File>
+            <File>
+              <FileName>tcp_client_demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-APP\tcp_client_demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>tcp_demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-APP\tcp_demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>tcp_server_demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-APP\tcp_server_demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>httpd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\apps\webserver\httpd.c</FilePath>
+            </File>
+            <File>
+              <FileName>httpd-cgi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\apps\webserver\httpd-cgi.c</FilePath>
+            </File>
+            <File>
+              <FileName>httpd-fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\apps\webserver\httpd-fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>http-strings.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uIP-1.0\apps\webserver\http-strings.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>NET</GroupName>
+          <Files>
+            <File>
+              <FileName>dStream.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\NET\EDP\dStream.c</FilePath>
+            </File>
+            <File>
+              <FileName>EdpKit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\NET\EDP\EdpKit.c</FilePath>
+            </File>
+            <File>
+              <FileName>fault.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\NET\onenet\src\fault.c</FilePath>
+            </File>
+            <File>
+              <FileName>onenet.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\NET\onenet\src\onenet.c</FilePath>
             </File>
           </Files>
         </Group>

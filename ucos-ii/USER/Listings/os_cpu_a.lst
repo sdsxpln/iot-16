@@ -317,10 +317,11 @@ ARM Macro Assembler    Page 5
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=..\obj\os_cpu_a.d -o..\obj\os_cpu_a.o -IF:\work\stm32\ucos-ii\USER
-\RTE -IF:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include -IF:\Keil_v5
-\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 514" --predefine="STM32F
-10X_HD SETA 1" --list=.\listings\os_cpu_a.lst ..\UCOSII\PORT\os_cpu_a.asm
+ork --depend=..\obj\os_cpu_a.d -o..\obj\os_cpu_a.o -ID:\Documents\GitHub\iot\uc
+os-ii\USER\RTE -IF:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include -I
+F:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 514" --predefi
+ne="STM32F10X_HD SETA 1" --list=.\listings\os_cpu_a.lst ..\UCOSII\PORT\os_cpu_a
+.asm
 
 
 
