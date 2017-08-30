@@ -28,13 +28,13 @@ void start_task(void *pdata);
 
 //network0任务
 //设置任务优先级
-#define NETWORK_TASK_PRIO       			7 
+#define ETH_TASK_PRIO       			8 
 //设置任务堆栈大小
-#define NETWORK_STK_SIZE  		    		64
+#define ETH_STK_SIZE  		    		64
 //任务堆栈	
-OS_STK NETWORK_TASK_STK[NETWORK_STK_SIZE];
+OS_STK ETH_TASK_STK[ETH_STK_SIZE];
 //任务函数
-void network_task(void *pdata);
+void eth_task(void *pdata);
 
 
 //LED0任务
@@ -79,9 +79,9 @@ void get_time(u8 *time)
 	delay_init();	    //延时函数初始化	  
 	LED_Init();		  	//初始化与LED连接的硬件接口
 	RTC_Init();
-	while(tapdev_init());//ԵʼۯENC28J60խϳ
+	while(tapdev_init());//ENC28J60խϳ
 	uip_init();				//uIP初始化						  	 
-	uip_ipaddr(ipaddr, 192,168,0,111);	//设置本地设置IP地址
+	uip_ipaddr(ipaddr, 192,168,0,160);	//设置本地设置IP地址
 	uip_sethostaddr(ipaddr);					    
 	uip_ipaddr(ipaddr, 192,168,0,1); 	//设置网关IP地址(其实就是你路由器的IP地址)
 	uip_setdraddr(ipaddr);						 
@@ -104,7 +104,7 @@ void start_task(void *pdata)
   OS_ENTER_CRITICAL();			//进入临界区(无法被中断打断)    
  	OSTaskCreate(led0_task,(void *)0,(OS_STK*)&LED0_TASK_STK[LED0_STK_SIZE-1],LED0_TASK_PRIO);						   
  	OSTaskCreate(led1_task,(void *)0,(OS_STK*)&LED1_TASK_STK[LED1_STK_SIZE-1],LED1_TASK_PRIO);
-  OSTaskCreate(network_task,(void *)0,(OS_STK*)&LED1_TASK_STK[LED1_STK_SIZE-1],LED1_TASK_PRIO);	
+  OSTaskCreate(eth_task,(void *)0,(OS_STK*)&ETH_TASK_STK[ETH_STK_SIZE-1],ETH_TASK_PRIO);	
 	OSTaskSuspend(START_TASK_PRIO);	//挂起起始任务.
 	OS_EXIT_CRITICAL();				//退出临界区(可以被中断打断)
 }
@@ -133,7 +133,7 @@ void led1_task(void *pdata)
 	};
 }
 
-void network_task(void *pdata)
+void eth_task(void *pdata)
 {
 	while (1)
 	{

@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\UCOSII\CONFIG;..\UCOSII\CORE;..\UCOSII\PORT;..\HARDWARE\ENC28J60;..\HARDWARE\spi;..\HARDWARE\tim;..\uIP-APP;..\uIP-1.0\apps\webserver;..\uIP-1.0\uip;..\HARDWARE\rtc;..\NET\EDP;..\NET\onenet\inc</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\UCOSII\CONFIG;..\UCOSII\CORE;..\UCOSII\PORT;..\HARDWARE\ENC28J60;..\HARDWARE\spi;..\HARDWARE\tim;..\uIP-APP;..\uIP-1.0\apps\webserver;..\uIP-1.0\uip;..\HARDWARE\rtc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -802,31 +802,6 @@
               <FileName>http-strings.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\uIP-1.0\apps\webserver\http-strings.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>NET</GroupName>
-          <Files>
-            <File>
-              <FileName>dStream.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\NET\EDP\dStream.c</FilePath>
-            </File>
-            <File>
-              <FileName>EdpKit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\NET\EDP\EdpKit.c</FilePath>
-            </File>
-            <File>
-              <FileName>fault.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\NET\onenet\src\fault.c</FilePath>
-            </File>
-            <File>
-              <FileName>onenet.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\NET\onenet\src\onenet.c</FilePath>
             </File>
           </Files>
         </Group>
